@@ -1,0 +1,17 @@
+#--------------------------------------------------------------------------
+# AMD Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Sat Dec 27 08:30:51 IST 2025
+# Process ID (PID): 17448
+# User: Bathiya Dissanayake
+# OS: Windows 11
+# Project: cache_group
+# Part: Zybo (xc7z010clg400-1)
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with AMD.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Target FileSet is null. Cannot finish Drag-Drop operation.

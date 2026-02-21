@@ -1,0 +1,156 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Dec 28 15:52:41 2025
+# Process ID: 22688
+# Current directory: E:/UOM/UOM_ACA_5/DSD/project/cache_group
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7824 E:\UOM\UOM_ACA_5\DSD\project\cache_group\cache_group.xpr
+# Log file: E:/UOM/UOM_ACA_5/DSD/project/cache_group/vivado.log
+# Journal file: E:/UOM/UOM_ACA_5/DSD/project/cache_group\vivado.jou
+# Running On        :LAPTOP-UDU8USLV
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :8269 MB
+# Swap memory       :24766 MB
+# Total Virtual     :33035 MB
+# Available Virtual :6595 MB
+#-----------------------------------------------------------
+start_gui
+oopen_project E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.xprWWARNING: [Board 49-91] Board repository path 'C:/Users/Bathiya' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Users/Bathiya' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Bathiya' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Bathiya' does not exist, it will not be used to search board files.WWARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/ACA' does not exist, it will not be used to search board files.WWARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/ACA' does not exist, it will not be used to search board files.WWARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/5/DSD/In' does not exist, it will not be used to search board files.WWARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/5/DSD/In' does not exist, it will not be used to search board files.WWARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/Downloads/vivado-boards-master/vivado-boards-master/new/board_files' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/ACA' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/5/DSD/In' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'e:/FPGA_course/sequence_detect/class/overlapping_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/class/overlap_sequence_detector/class/overlap_sequence_detector/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/AppData/Roaming/Xilinx/Vivado/Dissanayake/Downloads/vivado-boards-master/vivado-boards-master/new/board_files' does not exist, it will not be used to search board files.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/xillinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not availableScanning sources...
+Finished scanning sources
+IINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiedINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/xillinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:59 ; elapsed = 00:00:44 . Memory (MB): peak = 1631.707 ; gain = 533.516
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
+INFO: [Project 1-454] Reading design checkpoint 'e:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'mem_ctrl_inst/my_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2056.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 806 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.srcs/constrs_1/new/design_con.xdc]
+Finished Parsing XDC File [E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.srcs/constrs_1/new/design_con.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2140.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 2271.082 ; gain = 618.746
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Mar 09 2024-05:30:37
+    **** Build number : 2024.1.1709942437
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.059 ; gain = 14.590
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279545336A
+open_hw_target: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2756.453 ; gain = 25.395
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2914.383 ; gain = 111.543
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clk' matched to 'port' objects.
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+create_clock -period 10.000 -name clk -waveform {0.000 5.000} clk
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clk' matched to 'port' objects.
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210279545336A

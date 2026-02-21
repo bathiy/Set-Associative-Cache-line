@@ -1,0 +1,174 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Dec 27 12:24:32 2025
+# Process ID: 21356
+# Current directory: E:/UOM/UOM_ACA_5/DSD/project/cache_group
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12500 E:\UOM\UOM_ACA_5\DSD\project\cache_group\cache_group.xpr
+# Log file: E:/UOM/UOM_ACA_5/DSD/project/cache_group/vivado.log
+# Journal file: E:/UOM/UOM_ACA_5/DSD/project/cache_group\vivado.jou
+# Running On        :LAPTOP-UDU8USLV
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :8269 MB
+# Swap memory       :10281 MB
+# Total Virtual     :18551 MB
+# Available Virtual :8521 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.xpr
+update_compile_order -fileset sources_1
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/memCTRLWB.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topBRAM.sv -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCacheWT.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCache.sv -filesets [get_filesets *]
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topWB.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/top.sv -filesets [get_filesets *]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+close_design
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topV1.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topWB.sv -filesets [get_filesets *]
+synth_design -top FPGACacheSystem -part xc7z010clg400-1 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+close_design
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topV2.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topV1.sv -filesets [get_filesets *]
+update_files -from_files {{E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCache (1).sv}} -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCacheWT.sv -filesets [get_filesets *]
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCache.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/FourWaySetAssociativeCacheWT.sv -filesets [get_filesets *]
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/memCTRLWBV2.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/memCTRLWB.sv -filesets [get_filesets *]
+synth_design -top FPGACacheSystem -part xc7z010clg400-1 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+update_files -from_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topV3.sv -to_files E:/UOM/UOM_ACA_5/DSD/project/cache_group/topV2.sv -filesets [get_filesets *]
+synth_design -top FPGACacheSystem -part xc7z010clg400-1 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+close_design
+synth_design -top FPGACacheSystem -part xc7z010clg400-1 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {E:/UOM/UOM_ACA_5/DSD/project/cache_group/cache_group.runs/impl_1/FPGACacheSystem.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
