@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module FPGACacheSystem (
-    input  logic        clk,       // Main Board Clock (e.g., 100MHz)
-    input  logic        reset,     // Reset Button (Active High)
+    input  logic        clk,       // Main Board Clock
+    input  logic        reset,     // Button
     input  logic        uart_rx,   // UART RX Pin
     output logic        uart_tx,   // UART TX Pin
     output logic [3:0]  led        // Status LEDs
@@ -13,7 +13,6 @@ module FPGACacheSystem (
     // ==========================================
     logic sys_clk;
     
-    // Slow down clock for reliable UART and logic stepping
     clkdiv #(.timer1limit(50)) clk_gen (
         .clk(clk),
         .reset(reset),
@@ -32,7 +31,7 @@ module FPGACacheSystem (
     logic        tx_active;
     logic        tx_done;
 
-    // Cache <-> CPU (FSM) Interface
+    // Cache CPU Interface (Driven by UART FSM)
     logic [17:0] cpu_addr;
     logic [31:0] cpu_wrData;
     logic [3:0]  cpu_wrMask;
@@ -42,26 +41,24 @@ module FPGACacheSystem (
     logic        cpu_respValid;
     logic        cpu_stall;
 
-    // Cache <-> Memory Controller Interface
+    // Cache <-> Memory Controller Interface (Internal Connection)
     logic [17:0] mem_addr;
-    logic        mem_rdEn;      // Read Enable (Refill)
-    logic [31:0] mem_data;      // Read Data
-    logic        mem_valid;     // Read Data Valid
-    logic        mem_ready;     // Memory Ready
-    logic        mem_wrEn;      // Write Enable (Write-Through)
-    logic [31:0] mem_wrData;    // Write Data
+    logic        mem_rdEn;
+    logic [31:0] mem_data;
+    logic        mem_valid;
+    logic        mem_ready;
 
-    // Backdoor (Direct BRAM) Interface
+    // Backdoor Memory Interface (Driven by UART FSM)
     logic [15:0] ext_addr;
     logic [31:0] ext_wdata;
     logic        ext_wen;
 
-    // LED Debugging:
-    // LED 3: CPU Stall (High during Miss/Refill)
-    // LED 2: Memory Write Happening (Write-Through)
-    // LED 1: Backdoor Write Happening
-    // LED 0: UART RX Activity
-    assign led = {cpu_stall, mem_wrEn, ext_wen, rx_dv};
+    // LED Status
+    // LED 3: Cache Stall (Miss in progress)
+    // LED 2: CPU Valid Response (Hit)
+    // LED 1: Backdoor Write Active
+    // LED 0: Heartbeat/RX
+    assign led = {cpu_stall, cpu_respValid, ext_wen, rx_dv};
 
     // ==========================================
     // 3. Module Instantiations
@@ -85,13 +82,12 @@ module FPGACacheSystem (
         .o_Tx_Done(tx_done)
     );
 
-    // The Cache Module (Chisel Generated)
-    // Supports Write-Through via io_mem_wrEn
+    // The Cache
     FourWaySetAssociativeCache cache_inst (
         .clock(sys_clk),
         .reset(reset),
         
-        // CPU Side (Connected to our FSM)
+        // CPU Side (Connected to FSM)
         .io_cpu_addr(cpu_addr),
         .io_cpu_wrData(cpu_wrData),
         .io_cpu_wrMask(cpu_wrMask),
@@ -101,33 +97,29 @@ module FPGACacheSystem (
         .io_cpu_respValid(cpu_respValid),
         .io_cpu_stall(cpu_stall),
 
-        // Memory Side (Connected to Memory Controller)
+        // Memory Side (Connected to Controller)
         .io_mem_addr(mem_addr),
         .io_mem_rdEn(mem_rdEn),
         .io_mem_data(mem_data),
         .io_mem_valid(mem_valid),
         .io_mem_ready(mem_ready),
-        .io_mem_wrEn(mem_wrEn),       // Write-Through Signal
-        .io_mem_wrData(mem_wrData),   // Write-Through Data
         
         .io_invalidate(1'b0)
     );
 
-    // The Memory Controller (Interface to Block RAM)
+    // The Memory Controller (Now manages the BRAM)
     MemoryController mem_ctrl_inst (
         .clk(sys_clk),
         .reset(reset),
         
-        // Cache Interface
+        // Connect to Cache
         .io_mem_addr(mem_addr),
         .io_mem_rdEn(mem_rdEn),
         .io_mem_data(mem_data),
         .io_mem_valid(mem_valid),
         .io_mem_ready(mem_ready),
-        .io_mem_wrEn(mem_wrEn),       // Write-Through Signal
-        .io_mem_wrData(mem_wrData),   // Write-Through Data
         
-        // Backdoor Interface
+        // Connect to UART FSM (for loading RAM)
         .ext_addr(ext_addr),
         .ext_wdata(ext_wdata),
         .ext_wen(ext_wen)
@@ -137,25 +129,27 @@ module FPGACacheSystem (
     // 4. UART Control FSM (The "CPU")
     // ==========================================
     typedef enum logic [3:0] {
-        IDLE,             // 0: Waiting for UART command
-        RX_GET_WR_DATA,   // 1: Waiting for Data word (Write)
-        RX_GET_WR_MASK,   // 2: Waiting for Mask (Write)
-        DO_WRITE_REQ,     // 3: EXECUTING WRITE (Wait for Hit/Miss Resolution)
-        RX_GET_RAM_DATA,  // 4: Backdoor Data
-        WAIT_FOR_CACHE,   // 5: Executing Read
-        SEND_RESPONSE     // 6: Sending Read Result
+        IDLE,
+        // Cache Write States
+        RX_GET_WR_DATA,
+        RX_GET_WR_MASK,
+        // RAM Load States
+        RX_GET_RAM_DATA,
+        // Execution States
+        WAIT_FOR_CACHE,  // Waiting for Hit or Refill
+        SEND_RESPONSE    // Sending Result to UART
     } state_t;
 
     state_t state = IDLE;
     
-    // Latches to store multi-part UART commands
     logic [17:0] latched_addr = 0;
     logic [31:0] latched_data = 0;
 
-    // Protocol Constants
-    localparam [3:0] CMD_READ_CACHE  = 4'h1; 
-    localparam [3:0] CMD_WRITE_CACHE = 4'h2; 
-    localparam [3:0] CMD_WRITE_RAM   = 4'h3; 
+    // Protocol Opcodes
+    localparam [3:0] CMD_READ_CACHE  = 4'h1; // 0x1...
+    localparam [3:0] CMD_WRITE_CACHE = 4'h2; // 0x2...
+    localparam [3:0] CMD_WRITE_RAM   = 4'h3; // 0x3... (New!)
+    localparam [31:0] HDR_HIT        = 32'hAAAA_AAAA;
 
     always_ff @(posedge sys_clk) begin
         if (reset) begin
@@ -166,40 +160,36 @@ module FPGACacheSystem (
             tx_dv <= 0;
         end else begin
             
-            // Auto-clear pulse signals
-            ext_wen <= 0; 
+            // Default Signal Levels
+            ext_wen <= 0; // Pulse only
             tx_dv   <= 0;
 
             case (state)
                 // ------------------------------------------------
-                // IDLE: Parse UART Opcode
+                // IDLE: Wait for Command
                 // ------------------------------------------------
                 IDLE: begin
-                    // SAFETY: Only clear request signals if the Cache is NOT stalled.
-                    // If we clear them while stalled, we lose the request.
-                    if (!cpu_stall) begin
-                        cpu_reqValid <= 0;
-                        cpu_wrEn <= 0; 
-                    end
+                    // If we just finished a request, verify valid is low
+                    if (!cpu_stall) cpu_reqValid <= 0;
 
                     if (rx_dv) begin
                         case (rx_word[31:28])
-                            // OP 1: READ CACHE
                             CMD_READ_CACHE: begin
+                                // Start Read Request
                                 cpu_addr <= rx_word[17:0];
-                                cpu_wrEn <= 0;       // Read Operation
-                                cpu_reqValid <= 1;   // Start Request
+                                cpu_wrEn <= 0;
+                                cpu_reqValid <= 1;
                                 state <= WAIT_FOR_CACHE;
                             end
 
-                            // OP 2: WRITE CACHE
                             CMD_WRITE_CACHE: begin
+                                // Prepare for Write
                                 latched_addr <= rx_word[17:0];
                                 state <= RX_GET_WR_DATA;
                             end
 
-                            // OP 3: WRITE RAM (Backdoor)
                             CMD_WRITE_RAM: begin
+                                // Prepare for RAM Load (Backdoor)
                                 latched_addr <= rx_word[17:0];
                                 state <= RX_GET_RAM_DATA;
                             end
@@ -208,31 +198,31 @@ module FPGACacheSystem (
                 end
 
                 // ------------------------------------------------
-                // READ OPERATION (Handles Miss Automatically)
+                // CACHE READ LOGIC
                 // ------------------------------------------------
                 WAIT_FOR_CACHE: begin
-                    // Keep request high.
-                    // If Miss: cpu_stall goes High. We stay here.
-                    // If Hit (or Miss Resolved): cpu_respValid goes High.
+                    // Keep Request Valid High until we get a response.
+                    // If it stalls (Miss), hardware handles refill automatically.
+                    // We just wait for 'cpu_respValid' to eventually go High.
                     cpu_reqValid <= 1; 
 
                     if (cpu_respValid) begin
                         latched_data <= cpu_rdData;
-                        cpu_reqValid <= 0;
+                        cpu_reqValid <= 0; // Request satisfied
                         state <= SEND_RESPONSE;
                     end
                 end
 
                 SEND_RESPONSE: begin
                     if (!tx_active) begin
-                        tx_word <= latched_data;
+                        tx_word <= latched_data; // Send the data back
                         tx_dv <= 1;
                         state <= IDLE;
                     end
                 end
 
                 // ------------------------------------------------
-                // WRITE OPERATION (Step 1 & 2: Get Payload)
+                // CACHE WRITE LOGIC
                 // ------------------------------------------------
                 RX_GET_WR_DATA: begin
                     if (rx_dv) begin
@@ -243,48 +233,28 @@ module FPGACacheSystem (
 
                 RX_GET_WR_MASK: begin
                     if (rx_dv) begin
+                        // Execute Cache Write
+                        cpu_addr <= latched_addr;
+                        cpu_wrData <= latched_data;
                         cpu_wrMask <= rx_word[3:0];
-                        state <= DO_WRITE_REQ; // Go to Execution State
+                        cpu_wrEn <= 1;
+                        cpu_reqValid <= 1;
+                        
+                        // We don't wait for response on write (Hit/Miss handled internally)
+                        // Just pulse valid for a few cycles or wait for stall to be low
+                        state <= IDLE; 
                     end
                 end
 
                 // ------------------------------------------------
-                // WRITE EXECUTION (Handles Write Miss)
-                // ------------------------------------------------
-                DO_WRITE_REQ: begin
-                    // 1. Assert all Write Signals
-                    cpu_addr     <= latched_addr;
-                    cpu_wrData   <= latched_data;
-                    cpu_wrEn     <= 1;
-                    cpu_reqValid <= 1;
-
-                    // 2. WAIT FOR STALL TO CLEAR
-                    // Scenario A (Hit): 
-                    //    cpu_stall is 0. We enter logic immediately.
-                    //    State moves to IDLE. Write is Done.
-                    //
-                    // Scenario B (Miss):
-                    //    Cache sees address is missing. Raises cpu_stall = 1.
-                    //    This logic block sees (!cpu_stall) is FALSE.
-                    //    We STAY in DO_WRITE_REQ. Signals remain High (1).
-                    //    Cache fetches data from MemoryController... (takes 50+ cycles)
-                    //    Refill Done -> cpu_stall becomes 0.
-                    //    We see (!cpu_stall) is TRUE.
-                    //    State moves to IDLE. Write is Done.
-                    
-                    if (!cpu_stall) begin
-                        state <= IDLE;
-                    end
-                end
-
-                // ------------------------------------------------
-                // BACKDOOR RAM WRITE
+                // RAM LOAD LOGIC (Backdoor)
                 // ------------------------------------------------
                 RX_GET_RAM_DATA: begin
                     if (rx_dv) begin
+                        // Write directly to BRAM
                         ext_addr <= latched_addr[15:0];
                         ext_wdata <= rx_word;
-                        ext_wen <= 1; 
+                        ext_wen <= 1; // Pulse write enable
                         state <= IDLE;
                     end
                 end

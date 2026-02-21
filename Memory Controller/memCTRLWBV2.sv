@@ -200,7 +200,7 @@ module MemoryController (
     // --------------------------------------------------------
     // BRAM Instantiation
     // --------------------------------------------------------
-    blk_mem_gen_0 my_bram (
+    blk_mem_gen_1 my_bram (
         .clka   (clk),
         .ena    (1'b1),
         .wea    (bram_wea),
