@@ -1,0 +1,109 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop
+vdataMems_4096x8
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1766918052
+!i10b 1
+!s100 ?c]<RUG@oVdzHz>nzX^C=1
+IkVmAWaRnSJFTSFnNZ3@K`1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 FourWaySetAssociativeCache_sv_unit
+S1
+R0
+Z5 w1766819797
+Z6 8C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/FourWaySetAssociativeCache.sv
+Z7 FC:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/FourWaySetAssociativeCache.sv
+L0 105
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1766918052.000000
+Z10 !s107 C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv|C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/FourWaySetAssociativeCache.sv|
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/FourWaySetAssociativeCache.sv|C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv|
+!i113 1
+Z12 o-work work
+Z13 tCvgOpt 0
+ndata@mems_4096x8
+vFourWaySetAssociativeCache
+R1
+R2
+!i10b 1
+!s100 eXJ78CkV;0LJLY8ohodW00
+IUGSDd1Z5?F^:e_J_lUz4i2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 150
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@four@way@set@associative@cache
+vtagMems_512x6
+R1
+R2
+!i10b 1
+!s100 6dzghUjn9RVCVEDzkoPdh0
+IVeOBkacU;DaA4E^BRTP@U1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 59
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+ntag@mems_512x6
+vtb_cache
+R1
+!s110 1766930478
+!i10b 1
+!s100 Y=cY=XGooUJ_f?`M6Anb81
+IMYXY0AP?_E>`2?87Bg=lI1
+R3
+!s105 tbCache_sv_unit
+S1
+R0
+w1766930448
+8C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv
+FC:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1766930478.000000
+!s107 C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Agrajith/Desktop/Sem 5/Digital System Design/ALUFinal/uartSV/uartSV.srcs/sources_1/imports/Desktop/tbCache.sv|
+!i113 1
+R12
+R13
